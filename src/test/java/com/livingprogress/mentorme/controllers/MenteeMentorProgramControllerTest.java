@@ -97,11 +97,6 @@ public class MenteeMentorProgramControllerTest extends BaseTest {
                                      .get(idx)
                                      .getTasks(), result.getGoals()
                                                         .get(idx).getTasks());
-
-            verifyEntities(demoEntity.getGoals()
-                                     .get(idx)
-                                     .getDocuments(), result.getGoals()
-                                                        .get(idx).getDocuments());
         });
         // set the persisted ids
         for (int i = 0; i < demoEntity.getGoals().size(); i++) {
@@ -227,7 +222,7 @@ public class MenteeMentorProgramControllerTest extends BaseTest {
         SearchResult<MenteeMentorProgram> result = readSearchResult(entities, MenteeMentorProgram.class);
         mockMvc.perform(MockMvcRequestBuilders.get("/menteeMentorPrograms?sortColumn=id&sortOrder=ASC")
                                               .accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
+               .andDo(print())
                .andExpect(status().isOk())
                .andExpect(content().json(entities));
         SearchResult<MenteeMentorProgram> result1 = getSearchResult

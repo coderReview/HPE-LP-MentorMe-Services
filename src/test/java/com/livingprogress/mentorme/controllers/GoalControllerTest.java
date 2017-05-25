@@ -11,7 +11,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.Comparator;
-import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

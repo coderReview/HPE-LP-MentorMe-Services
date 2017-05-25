@@ -22,7 +22,6 @@ import java.util.stream.IntStream;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**

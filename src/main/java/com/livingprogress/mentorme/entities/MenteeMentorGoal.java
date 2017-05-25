@@ -1,19 +1,24 @@
 package com.livingprogress.mentorme.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import static javax.persistence.TemporalType.TIMESTAMP;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-
-import javax.persistence.*;
-
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static javax.persistence.TemporalType.TIMESTAMP;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * The mentee mentor goal.
@@ -67,21 +72,5 @@ public class MenteeMentorGoal extends IdentifiableEntity {
     @JoinTable(name = "mentee_mentor_goal_useful_link", joinColumns = {
         @JoinColumn(name = "mentee_mentor_goal_id")}, inverseJoinColumns = {@JoinColumn(name = "useful_link_id")})
     private List<UsefulLink> usefulLinks;
-
-    /**
-     * The documents
-     */
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
-    @Transient
-    private List<Document> documents;
-
-    public void setDocuments(List<Document> documents) {
-        // nothing
-    }
-
-    public List<Document> getDocuments() {
-        return this.goal == null ? new ArrayList<Document>() : this.goal.getDocuments();
-    }
 
 }

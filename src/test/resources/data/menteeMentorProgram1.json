@@ -815,23 +815,6 @@
           "agreedAgreement" : true
         },
         "createdOn" : "2016-02-03T00:00:00"
-      } ],
-      "documents" : [ {
-        "id" : 3,
-        "createdOn" : "2016-12-03T00:00:00",
-        "lastModifiedOn" : "2016-12-03T00:00:00",
-        "createdBy" : 3,
-        "lastModifiedBy" : 3,
-        "name" : "name3",
-        "path" : "path3"
-      }, {
-        "id" : 4,
-        "createdOn" : "2016-12-04T00:00:00",
-        "lastModifiedOn" : "2016-12-04T00:00:00",
-        "createdBy" : 4,
-        "lastModifiedBy" : 4,
-        "name" : "name4",
-        "path" : "path4"
       } ]
     },
     "completed" : true,
@@ -854,24 +837,7 @@
       "endDate" : "2016-12-31"
     } ],
     "menteeMentorProgramId" : 1,
-    "usefulLinks" : [ ],
-    "documents" : [ {
-        "id" : 3,
-        "createdOn" : "2016-12-03T00:00:00",
-        "lastModifiedOn" : "2016-12-03T00:00:00",
-        "createdBy" : 3,
-        "lastModifiedBy" : 3,
-        "name" : "name3",
-        "path" : "path3"
-      }, {
-        "id" : 4,
-        "createdOn" : "2016-12-04T00:00:00",
-        "lastModifiedOn" : "2016-12-04T00:00:00",
-        "createdBy" : 4,
-        "lastModifiedBy" : 4,
-        "name" : "name4",
-        "path" : "path4"
-      } ]
+    "usefulLinks" : [ ]
   } ],
   "responsibilities" : [ {
     "id" : 1,

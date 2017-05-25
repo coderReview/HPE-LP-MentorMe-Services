@@ -126,24 +126,7 @@
       "endDate" : "2016-12-31"
     } ],
     "menteeMentorProgramId" : 1,
-    "usefulLinks" : [ ],
-    "documents" : [ {
-        "id" : 3,
-        "createdOn" : "2016-12-03T00:00:00",
-        "lastModifiedOn" : "2016-12-03T00:00:00",
-        "createdBy" : 3,
-        "lastModifiedBy" : 3,
-        "name" : "name3",
-        "path" : "path3"
-      }, {
-        "id" : 4,
-        "createdOn" : "2016-12-04T00:00:00",
-        "lastModifiedOn" : "2016-12-04T00:00:00",
-        "createdBy" : 4,
-        "lastModifiedBy" : 4,
-        "name" : "name4",
-        "path" : "path4"
-      } ]
+    "usefulLinks" : [ ]
   }, {
     "id" : 2,
     "goal" : {
@@ -185,8 +168,7 @@
       "endDate" : "2016-12-30"
     } ],
     "menteeMentorProgramId" : 2,
-    "usefulLinks" : [ ],
-    "documents" : [ ]
+    "usefulLinks" : [ ]
   }, {
     "id" : 3,
     "goal" : {
@@ -228,8 +210,7 @@
       "endDate" : "2016-12-29"
     } ],
     "menteeMentorProgramId" : 3,
-    "usefulLinks" : [ ],
-    "documents" : [ ]
+    "usefulLinks" : [ ]
   }, {
     "id" : 4,
     "goal" : {
@@ -271,8 +252,7 @@
       "endDate" : "2016-12-28"
     } ],
     "menteeMentorProgramId" : 4,
-    "usefulLinks" : [ ],
-    "documents" : [ ]
+    "usefulLinks" : [ ]
   }, {
     "id" : 5,
     "goal" : {
@@ -314,8 +294,7 @@
       "endDate" : "2016-12-27"
     } ],
     "menteeMentorProgramId" : 5,
-    "usefulLinks" : [ ],
-    "documents" : [ ]
+    "usefulLinks" : [ ]
   }, {
     "id" : 6,
     "goal" : {
@@ -357,7 +336,6 @@
       "endDate" : "2016-12-26"
     } ],
     "menteeMentorProgramId" : 2,
-    "usefulLinks" : [ ],
-    "documents" : [ ]
+    "usefulLinks" : [ ]
   } ]
 }
