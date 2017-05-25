@@ -113,7 +113,6 @@ public class DocumentController extends BaseUploadController {
         } else if (EntityTypes.MENTEE_MENTOR_GOAL.equalsIgnoreCase(entityType)) {
             MenteeMentorGoal goal = menteeMentorGoalService.get(entityId);
             goal.getGoal().getDocuments().addAll(docs);
-            goal.getDocuments().addAll(docs);
             // newly added document
             for (Document doc : docs) {
                 Helper.audit(activityRepository, menteeMentorProgramRepository,
@@ -145,7 +144,7 @@ public class DocumentController extends BaseUploadController {
         if (EntityTypes.MENTEE_MENTOR_PROGRAM.equalsIgnoreCase(entityType)) {
             docs = menteeMentorProgramService.get(entityId).getDocuments();
         } else if (EntityTypes.MENTEE_MENTOR_GOAL.equalsIgnoreCase(entityType)) {
-            docs = menteeMentorGoalService.get(entityId).getDocuments();
+            docs = menteeMentorGoalService.get(entityId).getGoal().getDocuments();
         } else {
             throw new MentorMeException("The provided entityType is unknown.");
         }
@@ -179,7 +178,7 @@ public class DocumentController extends BaseUploadController {
         if (EntityTypes.MENTEE_MENTOR_PROGRAM.equalsIgnoreCase(entityType)) {
             return menteeMentorProgramService.get(entityId).getDocuments();
         } else if (EntityTypes.MENTEE_MENTOR_GOAL.equalsIgnoreCase(entityType)) {
-            return menteeMentorGoalService.get(entityId).getDocuments();
+            return menteeMentorGoalService.get(entityId).getGoal().getDocuments();
         } else {
             throw new MentorMeException("The provided entityType is unknown.");
         }

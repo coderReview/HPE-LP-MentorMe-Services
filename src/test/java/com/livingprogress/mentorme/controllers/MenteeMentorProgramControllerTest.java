@@ -97,6 +97,11 @@ public class MenteeMentorProgramControllerTest extends BaseTest {
                                      .get(idx)
                                      .getTasks(), result.getGoals()
                                                         .get(idx).getTasks());
+
+            verifyEntities(demoEntity.getGoals()
+                                     .get(idx)
+                                     .getDocuments(), result.getGoals()
+                                                        .get(idx).getDocuments());
         });
         // set the persisted ids
         for (int i = 0; i < demoEntity.getGoals().size(); i++) {
@@ -116,7 +121,6 @@ public class MenteeMentorProgramControllerTest extends BaseTest {
                 t1.setId(t2.getId());
             }
         }
-
         assertEquals(objectMapper.writeValueAsString(demoEntity), objectMapper.writeValueAsString(result));
         // test null institutional program
         demoEntity.setId(0);

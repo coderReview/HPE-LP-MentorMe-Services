@@ -301,8 +301,6 @@ public class InstitutionalProgramController extends BaseUploadController {
 
                 mmGoal.setGoal(goal);
                 mmGoal.setMenteeMentorProgram(mmProgram);
-                mmGoal.setDocuments(new ArrayList<>(goal.getDocuments()));
-                mmGoal.setUsefulLinks(new ArrayList<>(goal.getUsefulLinks()));
                 
                 if (goal.getTasks() != null && !goal.getTasks().isEmpty()) {
                     List<MenteeMentorTask> tasks = new ArrayList<>();

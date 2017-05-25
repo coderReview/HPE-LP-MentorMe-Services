@@ -54,7 +54,6 @@ public class MenteeMentorTask extends IdentifiableEntity {
     @Temporal(DATE)
     private Date endDate;
 
-
     /**
      * The mentee mentor goal.
      */

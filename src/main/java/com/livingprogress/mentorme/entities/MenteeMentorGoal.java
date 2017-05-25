@@ -1,10 +1,15 @@
 package com.livingprogress.mentorme.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -54,24 +59,29 @@ public class MenteeMentorGoal extends IdentifiableEntity {
     @ManyToOne
     @JoinColumn(name = "mentee_mentor_program_id")
     private MenteeMentorProgram menteeMentorProgram;
-    
+
     /**
      * The useful links.
      */
-    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-    @JoinTable(name = "mentee_mentor_goal_useful_link",
-            joinColumns = {@JoinColumn(name = "mentee_mentor_goal_id")},
-            inverseJoinColumns = {@JoinColumn(name = "useful_link_id")})
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "mentee_mentor_goal_useful_link", joinColumns = {
+        @JoinColumn(name = "mentee_mentor_goal_id")}, inverseJoinColumns = {@JoinColumn(name = "useful_link_id")})
     private List<UsefulLink> usefulLinks;
 
     /**
-     * The documents.
+     * The documents
      */
-    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-    @JoinTable(name = "mentee_mentor_goal_document",
-            joinColumns = {@JoinColumn(name = "mentee_mentor_goal_id")},
-            inverseJoinColumns = {@JoinColumn(name = "document_id")})
+    @Getter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
+    @Transient
     private List<Document> documents;
 
-}
+    public void setDocuments(List<Document> documents) {
+        // nothing
+    }
 
+    public List<Document> getDocuments() {
+        return this.goal == null ? new ArrayList<Document>() : this.goal.getDocuments();
+    }
+
+}
